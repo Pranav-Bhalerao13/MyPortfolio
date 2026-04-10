@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pranav Bhalerao | Engineering Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --neon-blue: #00f3ff;
+            --deep-blue: #0a192f;
+            --glass-bg: rgba(17, 25, 40, 0.75);
+            --glass-border: rgba(255, 255, 255, 0.125);
+            --text-main: #ccd6f6;
+            --text-highlight: #64ffda;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--deep-blue);
+            color: var(--text-main);
+            font-family: 'Rajdhani', sans-serif;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(0, 243, 255, 0.1) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(100, 255, 218, 0.05) 0%, transparent 20%);
+        }
+
+        /* --- NAVIGATION TABS --- */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .logo {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.5rem;
+            color: var(--neon-blue);
+            text-shadow: 0 0 10px rgba(0, 243, 255, 0.5);
+        }
+
+        .nav-tabs {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--text-main);
+            font-size: 1.1rem;
+            padding: 8px 20px;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nav-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 243, 255, 0.2), transparent);
+            transition: 0.5s;
+        }
+
+        .nav-link:hover::before {
+            left: 100%;
+        }
+
+        .nav-link:hover {
+            color: var(--neon-blue);
+            border-color: var(--neon-blue);
+            box-shadow: 0 0 15px rgba(0, 243, 255, 0.3);
+            background: rgba(0, 243, 255, 0.05);
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 50px;
+            padding: 0 10%;
+        }
+
+        .hero-text h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 4rem;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .hero-text .highlight {
+            color: var(--text-highlight);
+        }
+
+        .hero-text p {
+            font-size: 1.5rem;
+            max-width: 600px;
+            margin-bottom: 30px;
+        }
+
+        .hero-img-container {
+            position: relative;
+        }
+
+        .profile-img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid var(--neon-blue);
+            box-shadow: 0 0 30px rgba(0, 243, 255, 0.4);
+            transition: transform 0.5s ease;
+        }
+
+        .profile-img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 50px rgba(0, 243, 255, 0.6);
+        }
+
+        /* --- PROJECTS GRID --- */
+        .section {
+            padding: 100px 10%;
+        }
+
+        .section-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .section-title::after {
+            content: "";
+            height: 1px;
+            flex-grow: 1;
+            background: var(--glass-border);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 10px;
+            padding: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--neon-blue);
+            box-shadow: 0 10px 30px -10px rgba(2, 12, 27, 0.7);
+        }
+
+        .project-card h3 {
+            font-size: 1.8rem;
+            color: var(--text-highlight);
+            margin-bottom: 10px;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.9rem;
+            color: var(--neon-blue);
+        }
+
+        .click-hint {
+            margin-top: 20px;
+            font-size: 0.8rem;
+            color: var(--glass-border);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* --- MODAL (POPUP) --- */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+            backdrop-filter: blur(5px);
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .modal-content {
+            background: #112240;
+            width: 80%;
+            max-width: 800px;
+            padding: 40px;
+            border-radius: 15px;
+            border: 1px solid var(--neon-blue);
+            box-shadow: 0 0 50px rgba(0, 243, 255, 0.2);
+            transform: scale(0.9);
+            transition: transform 0.3s ease;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .modal-overlay.active .modal-content {
+            transform: scale(1);
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            font-size: 2rem;
+            color: var(--text-highlight);
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .close-btn:hover {
+            transform: rotate(90deg);
+            color: #fff;
+        }
+
+        .modal-body h2 {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--neon-blue);
+            margin-bottom: 20px;
+        }
+
+        .modal-body h4 {
+            color: var(--text-highlight);
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .modal-body ul {
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .modal-body li {
+            margin-bottom: 5px;
+        }
+
+        /* --- CONTACT / FOOTER --- */
+        footer {
+            text-align: center;
+            padding: 50px;
+            background: #020c1b;
+            margin-top: 50px;
+        }
+
+        .btn-main {
+            padding: 15px 40px;
+            background: transparent;
+            border: 2px solid var(--neon-blue);
+            color: var(--neon-blue);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-main:hover {
+            background: rgba(0, 243, 255, 0.1);
+            box-shadow: 0 0 20px rgba(0, 243, 255, 0.4);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero { flex-direction: column-reverse; text-align: center; height: auto; padding-top: 120px;}
+            .nav-tabs { display: none; } /* Could add hamburger menu for mobile */
+            h1 { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">PB.DEV</div>
+        <div class="nav-tabs">
+            <a href="#hero" class="nav-link">Home</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#about" class="nav-link">Skills</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </div>
+    </nav>
+
+    <section id="hero" class="hero">
+        <div class="hero-text">
+            <h4>Hi, my name is</h4>
+            <h1>Pranav Bhalerao.</h1>
+            <h2 class="highlight">I build autonomous systems.</h2>
+            <p>Specializing in Robotics, IoT Infrastucture, and Embedded Engineering.</p>
+            <a href="#projects" class="btn-main">View Work</a>
+        </div>
+        <div class="hero-img-container">
+            <img src="myimg.jpeg" alt="Pranav Bhalerao" class="profile-img">
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <div class="section-title">Featured Projects</div>
+        
+        <div class="projects-grid">
+            
+            <div class="project-card" onclick="openModal('modal1')">
+                <h3>Firefighting Robot</h3>
+                <p>Autonomous mobile robot for residential fire safety.</p>
+                <div class="tech-tags">
+                    <span>C++</span> <span>Robotics</span> <span>Sensors</span>
+                </div>
+                <div class="click-hint">Click to expand ></div>
+            </div>
+
+            <div class="project-card" onclick="openModal('modal2')">
+                <h3>Smart Garden System</h3>
+                <p>IoT automation for irrigation and soil monitoring.</p>
+                <div class="tech-tags">
+                    <span>IoT</span> <span>ESP8266</span> <span>Blynk</span>
+                </div>
+                <div class="click-hint">Click to expand ></div>
+            </div>
+
+            <div class="project-card" onclick="openModal('modal3')">
+                <h3>LoRa Agriculture</h3>
+                <p>Long-range monitoring without internet dependency.</p>
+                <div class="tech-tags">
+                    <span>LoRaWAN</span> <span>Remote Sensing</span>
+                </div>
+                <div class="click-hint">Click to expand ></div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contact" class="section" style="text-align: center;">
+        <div class="section-title" style="justify-content: center;">Get In Touch</div>
+        <p style="max-width: 500px; margin: 0 auto 30px;">I am currently looking for new opportunities in Embedded Systems. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
+        <a href="mailto:pranav@example.com" class="btn-main">Say Hello</a>
+    </section>
+
+    <footer>
+        <p>Designed & Built by Pranav Bhalerao</p>
+    </footer>
+
+    <div id="modal1" class="modal-overlay" onclick="closeModal('modal1')">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <span class="close-btn" onclick="closeModal('modal1')">&times;</span>
+            <div class="modal-body">
+                <h2>Autonomous Firefighting Robot</h2>
+                <p><strong>Published IEEE Xplore | Presented at ICEAMST 2025</strong></p>
+                <hr style="border: 0; border-top: 1px solid #333; margin: 15px 0;">
+                
+                <h4>Problem Statement</h4>
+                <p>Traditional firefighting systems are expensive and require human intervention. Small residential fires need a quick, autonomous response to prevent escalation.</p>
+                
+                <h4>Solution</h4>
+                <p>Designed a compact mobile robot that navigates confined spaces, detects fire via thermal/IR sensors, and activates a suppression mechanism automatically.</p>
+
+                <h4>Key Outcomes</h4>
+                <ul>
+                    <li>Successfully built working prototype.</li>
+                    <li>Reduced response time in simulated tests.</li>
+                    <li>Research paper published in IEEE.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal2" class="modal-overlay" onclick="closeModal('modal2')">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <span class="close-btn" onclick="closeModal('modal2')">&times;</span>
+            <div class="modal-body">
+                <h2>Smart Garden Automated System</h2>
+                <hr style="border: 0; border-top: 1px solid #333; margin: 15px 0;">
+                
+                <h4>Overview</h4>
+                <p>An IoT-based automation project designed to monitor environmental conditions and automate irrigation for plants to reduce water wastage.</p>
+                
+                <h4>Hardware Used</h4>
+                <ul>
+                    <li>ESP8266 Microcontroller</li>
+                    <li>Soil Moisture Sensor & DHT11</li>
+                    <li>Water Pumps</li>
+                </ul>
+
+                <h4>Features</h4>
+                <p>Real-time dashboard via Blynk, auto-shutoff for water conservation, and LCD status display.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal3" class="modal-overlay" onclick="closeModal('modal3')">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <span class="close-btn" onclick="closeModal('modal3')">&times;</span>
+            <div class="modal-body">
+                <h2>LoRa-Based Remote Agriculture</h2>
+                <hr style="border: 0; border-top: 1px solid #333; margin: 15px 0;">
+                
+                <h4>The Challenge</h4>
+                <p>Remote agricultural fields often lack Wi-Fi or cellular coverage, making standard IoT monitoring impossible.</p>
+                
+                <h4>The Innovation</h4>
+                <p>Used LoRa (Long Range) communication technology to transmit sensor data over kilometers without needing the internet. The system involves a Transmitter Node in the field and a Receiver Node at the base station.</p>
+
+                <h4>Skills Demonstrated</h4>
+                <ul>
+                    <li>Wireless Communication Protocols</li>
+                    <li>Low-power embedded design</li>
+                    <li>System Architecture</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openModal(modalId) {
+            document.getElementById(modalId).classList.add('active');
+            document.body.style.overflow = 'hidden'; // Stop background scrolling
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.remove('active');
+            document.body.style.overflow = 'auto'; // Restore scrolling
+        }
+
+        // Close modal if escape key is pressed
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape") {
+                const modals = document.querySelectorAll('.modal-overlay');
+                modals.forEach(modal => modal.classList.remove('active'));
+                document.body.style.overflow = 'auto';
+            }
+        });
+    </script>
+</body>
+</html>
