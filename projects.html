@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects | Pranav Bhalerao</title>
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@300;500;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Share+Tech+Mono:wght@400;700&display=swap" rel="stylesheet">
     <!-- Styles -->
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -19,6 +19,18 @@
             <a href="index.html#skills" class="nav-link">Skills</a>
             <a href="index.html#contact" class="nav-link">Contact</a>
             <a href="javascript:void(0)" class="btn-resume" onclick="handleResumeDownload()">Resume</a>
+        </div>
+        <button class="hamburger" id="hamburgerBtn" onclick="toggleMobileMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="index.html#hero" class="mobile-nav-link" onclick="closeMobileMenu()">Home</a>
+            <a href="projects.html" class="mobile-nav-link" onclick="closeMobileMenu()">Projects</a>
+            <a href="index.html#skills" class="mobile-nav-link" onclick="closeMobileMenu()">Skills</a>
+            <a href="index.html#contact" class="mobile-nav-link" onclick="closeMobileMenu()">Contact</a>
+            <a href="javascript:void(0)" class="mobile-btn-resume" onclick="handleResumeDownload(); closeMobileMenu();">Resume</a>
         </div>
     </nav>
 

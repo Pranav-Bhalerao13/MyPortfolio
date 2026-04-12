@@ -62,6 +62,37 @@ function downloadResume() {
     closeConfirm();
 }
 
+// Mobile Menu Toggle Functions
+function toggleMobileMenu() {
+    const mobileMenu = document.getElementById('mobileMenu');
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    
+    mobileMenu.classList.toggle('active');
+    hamburgerBtn.classList.toggle('active');
+}
+
+function closeMobileMenu() {
+    const mobileMenu = document.getElementById('mobileMenu');
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    
+    mobileMenu.classList.remove('active');
+    hamburgerBtn.classList.remove('active');
+}
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', (e) => {
+    const mobileMenu = document.getElementById('mobileMenu');
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const nav = document.querySelector('nav');
+    
+    if (mobileMenu && hamburgerBtn && nav) {
+        if (!nav.contains(e.target)) {
+            mobileMenu.classList.remove('active');
+            hamburgerBtn.classList.remove('active');
+        }
+    }
+});
+
 // Initialize on Load
 document.addEventListener('DOMContentLoaded', () => {
     // Add event listeners to all modal overlays for clicking outside to close
@@ -75,10 +106,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Handle Smooth Scrolling for internal links
+    // Handle Smooth Scrolling for internal links and close mobile menu
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             const href = this.getAttribute('href');
+            closeMobileMenu();
             if (href !== '#') {
                 e.preventDefault();
                 const target = document.querySelector(href);
