@@ -1,286 +1,509 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pranav Bhalerao | Autonomous Systems & IoT Engineer</title>
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Portfolio of Pranav Bhalerao, specializing in autonomous systems, IoT, and embedded engineering.">
+    <meta
+      name="description"
+      content="Portfolio of Pranav Bhalerao, specializing in autonomous systems, IoT, and embedded engineering."
+    />
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Share+Tech+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Share+Tech+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <!-- Styles -->
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <nav>
-        <a href="#hero" class="logo"></a>
-        <div class="nav-tabs">
-            <a href="#hero" class="nav-link">Home</a>
-            <a href="projects.html" class="nav-link">Projects</a>
-            <a href="#skills" class="nav-link">Skills</a>
-            <a href="#contact" class="nav-link">Contact</a>
-            <a href="javascript:void(0)" class="btn-resume" onclick="handleResumeDownload()">Resume</a>
-        </div>
-        <button class="hamburger" id="hamburgerBtn" onclick="toggleMobileMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-        <div class="mobile-menu" id="mobileMenu">
-            <a href="#hero" class="mobile-nav-link" onclick="closeMobileMenu()">Home</a>
-            <a href="projects.html" class="mobile-nav-link" onclick="closeMobileMenu()">Projects</a>
-            <a href="#skills" class="mobile-nav-link" onclick="closeMobileMenu()">Skills</a>
-            <a href="#contact" class="mobile-nav-link" onclick="closeMobileMenu()">Contact</a>
-            <a href="javascript:void(0)" class="mobile-btn-resume" onclick="handleResumeDownload(); closeMobileMenu();">Resume</a>
-        </div>
+      <a href="#hero" class="logo"></a>
+      <div class="nav-tabs">
+        <a href="#hero" class="nav-link">Home</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <a
+          href="javascript:void(0)"
+          class="btn-resume"
+          onclick="handleResumeDownload()"
+          >Resume</a
+        >
+      </div>
+      <button class="hamburger" id="hamburgerBtn" onclick="toggleMobileMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="#hero" class="mobile-nav-link" onclick="closeMobileMenu()"
+          >Home</a
+        >
+        <a
+          href="projects.html"
+          class="mobile-nav-link"
+          onclick="closeMobileMenu()"
+          >Projects</a
+        >
+        <a href="#skills" class="mobile-nav-link" onclick="closeMobileMenu()"
+          >Skills</a
+        >
+        <a href="#contact" class="mobile-nav-link" onclick="closeMobileMenu()"
+          >Contact</a
+        >
+        <a
+          href="javascript:void(0)"
+          class="mobile-btn-resume"
+          onclick="
+            handleResumeDownload();
+            closeMobileMenu();
+          "
+          >Resume</a
+        >
+      </div>
     </nav>
 
     <section id="hero" class="hero">
-        <div class="hero-text">
-            <h4>Hi, my name is</h4>
-            <h1>Pranav Bhalerao.</h1>
-            <span class="highlight">I build autonomous systems.</span>
-            <p>I specialize in IoT and I am also interested in software development. My focus is on creating intelligent, connected systems that bridge the gap between physical and digital worlds.</p>
-            <div style="display: flex; gap: 20px;">
-                <a href="projects.html" class="btn-main">View Work</a>
-                <a href="#contact" class="btn-main" style="background: rgba(0, 243, 255, 0.05);">Contact Me</a>
-            </div>
+      <div class="hero-text">
+        <h4>Hi, my name is</h4>
+        <h1>Pranav Bhalerao.</h1>
+        <span class="highlight">I build autonomous systems.</span>
+        <p>
+          I specialize in IoT and I am also interested in software development.
+          My focus is on creating intelligent, connected systems that bridge the
+          gap between physical and digital worlds.
+        </p>
+        <div style="display: flex; gap: 20px">
+          <a href="projects.html" class="btn-main">View Work</a>
+          <a
+            href="#contact"
+            class="btn-main"
+            style="background: rgba(0, 243, 255, 0.05)"
+            >Contact Me</a
+          >
         </div>
-        <div class="hero-img-container">
-            <img src="myimg.jpeg" alt="Pranav Bhalerao" class="profile-img">
-        </div>
+      </div>
+      <div class="hero-img-container">
+        <img src="myimg.jpeg" alt="Pranav Bhalerao" class="profile-img" />
+      </div>
     </section>
 
     <section id="skills" class="section">
-        <div class="section-title">Technical Expertise</div>
-        <div class="skills-container">
-            <div class="skill-card">
-                <h3>Languages</h3>
-                <div class="skill-list">
-                    <span class="skill-tag">C++</span>
-                    <span class="skill-tag">Python</span>
-                    <span class="skill-tag">Java</span>
-                </div>
-            </div>
-            <div class="skill-card">
-                <h3>Technologies</h3>
-                <div class="skill-list">
-                    <span class="skill-tag">IoT Systems</span>
-                    <span class="skill-tag">Embedded Systems</span>
-                    <span class="skill-tag">Microcontroller Programming (Arduino / ESP Board)</span>
-                    <span class="skill-tag">Sensor Integration</span>
-                    <span class="skill-tag">Robotics</span>
-                </div>
-            </div>
-            <div class="skill-card">
-                <h3>Tools</h3>
-                <div class="skill-list">
-                    <span class="skill-tag">Git</span>
-                    <span class="skill-tag">GitHub</span>
-                    <span class="skill-tag">Problem Solving</span>
-                    <span class="skill-tag">Data Structures</span>
-                </div>
-            </div>
+      <div class="section-title">Technical Expertise</div>
+      <div class="skills-container">
+        <div class="skill-card">
+          <h3>Languages</h3>
+          <div class="skill-list">
+            <span class="skill-tag">C++</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">Java</span>
+            <span class="skill-tag">HTML</span>
+            <span class="skill-tag">CSS</span>
+            <span class="skill-tag">JavaScript</span>
+          </div>
         </div>
+        <div class="skill-card">
+          <h3>Technologies</h3>
+          <div class="skill-list">
+            <span class="skill-tag">IoT Systems</span>
+            <span class="skill-tag">Embedded Systems</span>
+            <span class="skill-tag"
+              >Microcontroller Programming (Arduino / ESP Boards)</span
+            >
+            <span class="skill-tag">Software Development</span>
+            <span class="skill-tag">Frontend-Web Development</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <h3>Tools</h3>
+          <div class="skill-list">
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">GitHub</span>
+            <span class="skill-tag">Problem Solving</span>
+            <span class="skill-tag">Data Structures</span>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="projects" class="section">
-        <div class="section-title">Featured Projects</div>
-        
-        <div class="projects-grid">
-            
-            <div class="project-card" onclick="openModal('modal-lora')">
-                <div class="project-links">
-                    <a href="#" class="github-link" onclick="event.stopPropagation()">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" width="24" height="24" fill="currentColor"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5.7 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-.7zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
-                    </a>
-                </div>
-                <h3>LoRa Agriculture</h3>
-                <p>Long-range monitoring without internet dependency. Designed to bridge connectivity gaps in rural farming areas.</p>
-                <div class="tech-tags">
-                    <span>LoRaWAN</span> <span>Remote Sensing</span> <span>Embedded Systems</span>
-                </div>
-                <div class="click-hint">Click to expand ></div>
-            </div>
+      <div class="section-title">Featured Projects</div>
 
-            <div class="project-card" onclick="openModal('modal-fire')">
-                <div class="project-links">
-                    <a href="https://github.com/Pranav-Bhalerao13/Fire_Fighting_Robot.git" target="_blank" class="github-link" onclick="event.stopPropagation()">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" width="24" height="24" fill="currentColor"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5.7 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-.7zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
-                    </a>
-                </div>
-                <h3>Firefighting Robot</h3>
-                <p>Autonomous mobile robot for residential fire safety. Published in IEEE Xplore.</p>
-                <div class="tech-tags">
-                    <span>C++</span> <span>Robotics</span> <span>Sensors</span> <span>IEEE</span>
-                </div>
-                <div class="click-hint">Click to expand ></div>
-            </div>
-
-            <div class="project-card" onclick="openModal('modal-garden')">
-                <div class="project-links">
-                    <a href="https://github.com/Pranav-Bhalerao13/Smart_Gardening_System.git" target="_blank" class="github-link" onclick="event.stopPropagation()">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" width="24" height="24" fill="currentColor"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5.7 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-.7zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
-                    </a>
-                </div>
-                <h3>Smart Garden System</h3>
-                <p>IoT automation for irrigation and soil monitoring with real-time analytics.</p>
-                <div class="tech-tags">
-                    <span>IoT</span> <span>ESP8266</span> <span>Blynk</span> <span>Sensors</span>
-                </div>
-                <div class="click-hint">Click to expand ></div>
-            </div>
-
-            <div class="project-card" onclick="openModal('modal-weather')">
-                <div class="project-links">
-                    <a href="https://github.com/Pranav-Bhalerao13/Weather-App--Python.git" target="_blank" class="github-link" onclick="event.stopPropagation()">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" width="24" height="24" fill="currentColor"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5.7 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-.7zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
-                    </a>
-                </div>
-                <h3>Weather App</h3>
-                <p>Desktop GUI app using Python and Tkinter. Fetches real-time weather data via API.</p>
-                <div class="tech-tags">
-                    <span>Python</span> <span>Tkinter</span> <span>OpenWeather API</span>
-                </div>
-                <div class="click-hint">Click to expand ></div>
-            </div>
-
+      <div class="projects-grid">
+        <div class="project-card" onclick="openModal('modal-lora')">
+          <div class="project-links">
+            <a href="#" class="github-link" onclick="event.stopPropagation()">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 496 512"
+                width="24"
+                height="24"
+                fill="currentColor"
+              >
+                <path
+                  d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5.7 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-.7zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
+                />
+              </svg>
+            </a>
+          </div>
+          <h3>LoRa Agriculture</h3>
+          <p>
+            Long-range monitoring without internet dependency. Designed to
+            bridge connectivity gaps in rural farming areas.
+          </p>
+          <div class="tech-tags">
+            <span>LoRaWAN</span> <span>Remote Sensing</span>
+            <span>Embedded Systems</span>
+          </div>
+          <div class="click-hint">Click to expand ></div>
         </div>
-        <div style="text-align: center; margin-top: 50px;">
-            <a href="projects.html" class="btn-main">View All Projects</a>
+
+        <div class="project-card" onclick="openModal('modal-fire')">
+          <div class="project-links">
+            <a
+              href="https://github.com/Pranav-Bhalerao13/Fire_Fighting_Robot.git"
+              target="_blank"
+              class="github-link"
+              onclick="event.stopPropagation()"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 496 512"
+                width="24"
+                height="24"
+                fill="currentColor"
+              >
+                <path
+                  d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5.7 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-.7zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
+                />
+              </svg>
+            </a>
+          </div>
+          <h3>Firefighting Robot</h3>
+          <p>
+            Autonomous mobile robot for residential fire safety. Published in
+            IEEE Xplore.
+          </p>
+          <div class="tech-tags">
+            <span>C++</span> <span>Robotics</span> <span>Sensors</span>
+            <span>IEEE</span>
+          </div>
+          <div class="click-hint">Click to expand ></div>
         </div>
+
+        <div class="project-card" onclick="openModal('modal-garden')">
+          <div class="project-links">
+            <a
+              href="https://github.com/Pranav-Bhalerao13/Smart_Gardening_System.git"
+              target="_blank"
+              class="github-link"
+              onclick="event.stopPropagation()"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 496 512"
+                width="24"
+                height="24"
+                fill="currentColor"
+              >
+                <path
+                  d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5.7 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-.7zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
+                />
+              </svg>
+            </a>
+          </div>
+          <h3>Smart Garden System</h3>
+          <p>
+            IoT automation for irrigation and soil monitoring with real-time
+            analytics.
+          </p>
+          <div class="tech-tags">
+            <span>IoT</span> <span>ESP8266</span> <span>Blynk</span>
+            <span>Sensors</span>
+          </div>
+          <div class="click-hint">Click to expand ></div>
+        </div>
+
+        <div class="project-card" onclick="openModal('modal-weather')">
+          <div class="project-links">
+            <a
+              href="https://github.com/Pranav-Bhalerao13/Currency-Converter-using-fetchAPI"
+              target="_blank"
+              class="github-link"
+              onclick="event.stopPropagation()"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 496 512"
+                width="24"
+                height="24"
+                fill="currentColor"
+              >
+                <path
+                  d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5.7 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-.7zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
+                />
+              </svg>
+            </a>
+          </div>
+          <h3>Currency Converter</h3>
+          <p></p>
+          <div class="tech-tags">
+            <span>HTML5</span>
+            <span>CSS3</span>
+            <span>JavaScript (ES6) Fetch API</span>
+          </div>
+          <div class="click-hint">Click to expand ></div>
+        </div>
+      </div>
+      <div style="text-align: center; margin-top: 50px">
+        <a href="projects.html" class="btn-main">View All Projects</a>
+      </div>
     </section>
 
     <section id="contact" class="section">
-        <div class="contact-content">
-            <div class="section-title" style="justify-content: center;">Get In Touch</div>
-            <p>I'm currently looking for new opportunities in Embedded Systems and Software Development. Whether you have a question or just want to say hi, my inbox is always open!</p>
-            <a href="mailto:pranavbhalerao1312@gmail.com" class="btn-main" style="margin-top: 20px;">Say Hello</a>
-            
-            <div class="contact-links">
-                <a href="https://www.linkedin.com/in/pranav-bhalerao-781696345/" target="_blank" aria-label="LinkedIn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="contact-icon"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
-                </a>
-                <a href="mailto:pranavbhalerao1312@gmail.com" aria-label="Email">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="contact-icon"><path d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2z"/></svg>
-                </a>
-            </div>
+      <div class="contact-content">
+        <div class="section-title" style="justify-content: center">
+          Get In Touch
         </div>
+        <p>
+          I'm currently looking for new opportunities in Digital Systems and
+          Software Development. Whether you have a question or just want to say
+          hi, my inbox is always open!
+        </p>
+        <a
+          href="mailto:pranavbhalerao1312@gmail.com"
+          class="btn-main"
+          style="margin-top: 20px"
+          >Say Hello</a
+        >
+
+        <div class="contact-links">
+          <a
+            href="https://www.linkedin.com/in/pranav-bhalerao-781696345/"
+            target="_blank"
+            aria-label="LinkedIn"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 448 512"
+              class="contact-icon"
+            >
+              <path
+                d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"
+              />
+            </svg>
+          </a>
+          <a href="mailto:pranavbhalerao1312@gmail.com" aria-label="Email">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 512 512"
+              class="contact-icon"
+            >
+              <path
+                d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2z"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
     </section>
 
     <footer>
-        <p>Designed & Built by Pranav Bhalerao &copy; 2025</p>
+      <p>Designed & Built by Pranav Bhalerao &copy; 2025</p>
     </footer>
 
     <!-- Modals -->
     <div id="modal-lora" class="modal-overlay">
-        <div class="modal-content">
-            <span class="close-btn" onclick="closeModal('modal-lora')">&times;</span>
-            <div class="modal-body">
-                <h2>LoRa-Based Remote Agriculture</h2>
-                <hr style="border: 0; border-top: 1px solid var(--glass-border); margin: 15px 0;">
-                
-                <h4>The Challenge</h4>
-                <p>Remote agricultural fields often lack Wi-Fi or cellular coverage, making standard IoT monitoring impossible for deep-field management.</p>
-                
-                <h4>The Innovation</h4>
-                <p>Used LoRa (Long Range) communication technology to transmit sensor data over kilometers without needing the internet. The system involves a Transmitter Node in the field and a Receiver Node at the base station.</p>
+      <div class="modal-content">
+        <span class="close-btn" onclick="closeModal('modal-lora')"
+          >&times;</span
+        >
+        <div class="modal-body">
+          <h2>LoRa-Based Remote Agriculture</h2>
+          <hr
+            style="
+              border: 0;
+              border-top: 1px solid var(--glass-border);
+              margin: 15px 0;
+            "
+          />
 
-                <h4>Skills Demonstrated</h4>
-                <ul>
-                    <li>Wireless Communication Protocols (LoRaWAN)</li>
-                    <li>Low-power embedded design</li>
-                    <li>System Architecture and Data Handling</li>
-                </ul>
-            </div>
+          <h4>The Challenge</h4>
+          <p>
+            Remote agricultural fields often lack Wi-Fi or cellular coverage,
+            making standard IoT monitoring impossible for deep-field management.
+          </p>
+
+          <h4>The Innovation</h4>
+          <p>
+            Used LoRa (Long Range) communication technology to transmit sensor
+            data over kilometers without needing the internet. The system
+            involves a Transmitter Node in the field and a Receiver Node at the
+            base station.
+          </p>
+
+          <h4>Skills Demonstrated</h4>
+          <ul>
+            <li>Wireless Communication Protocols (LoRaWAN)</li>
+            <li>Low-power embedded design</li>
+            <li>System Architecture and Data Handling</li>
+          </ul>
         </div>
+      </div>
     </div>
 
     <div id="modal-fire" class="modal-overlay">
-        <div class="modal-content">
-            <span class="close-btn" onclick="closeModal('modal-fire')">&times;</span>
-            <div class="modal-body">
-                <h2>Autonomous Firefighting Robot</h2>
-                <p><strong>Published IEEE Xplore | Presented at ICEAMST 2025</strong></p>
-                <hr style="border: 0; border-top: 1px solid var(--glass-border); margin: 15px 0;">
-                
-                <h4>Problem Statement</h4>
-                <p>Traditional firefighting systems are expensive and require human intervention. Small residential fires need a quick, autonomous response to prevent escalation.</p>
-                
-                <h4>Solution</h4>
-                <p>Designed a compact mobile robot that navigates confined spaces, detects fire via thermal/IR sensors, and activates a suppression mechanism automatically.</p>
+      <div class="modal-content">
+        <span class="close-btn" onclick="closeModal('modal-fire')"
+          >&times;</span
+        >
+        <div class="modal-body">
+          <h2>Autonomous Firefighting Robot</h2>
+          <p>
+            <strong>Published IEEE Xplore | Presented at ICEAMST 2025</strong>
+          </p>
+          <hr
+            style="
+              border: 0;
+              border-top: 1px solid var(--glass-border);
+              margin: 15px 0;
+            "
+          />
 
-                <h4>Key Outcomes</h4>
-                <ul>
-                    <li>Successfully built and tested working prototype.</li>
-                    <li>Reduced response time in simulated fire tests.</li>
-                    <li>Research paper peer-reviewed and published in IEEE.</li>
-                </ul>
-            </div>
+          <h4>Problem Statement</h4>
+          <p>
+            Traditional firefighting systems are expensive and require human
+            intervention. Small residential fires need a quick, autonomous
+            response to prevent escalation.
+          </p>
+
+          <h4>Solution</h4>
+          <p>
+            Designed a compact mobile robot that navigates confined spaces,
+            detects fire via thermal/IR sensors, and activates a suppression
+            mechanism automatically.
+          </p>
+
+          <h4>Key Outcomes</h4>
+          <ul>
+            <li>Successfully built and tested working prototype.</li>
+            <li>Reduced response time in simulated fire tests.</li>
+            <li>Research paper peer-reviewed and published in IEEE.</li>
+          </ul>
         </div>
+      </div>
     </div>
 
     <div id="modal-garden" class="modal-overlay">
-        <div class="modal-content">
-            <span class="close-btn" onclick="closeModal('modal-garden')">&times;</span>
-            <div class="modal-body">
-                <h2>Smart Garden Automated System</h2>
-                <hr style="border: 0; border-top: 1px solid var(--glass-border); margin: 15px 0;">
-                
-                <h4>Overview</h4>
-                <p>An IoT-based automation project designed to monitor environmental conditions and automate irrigation for plants to reduce water wastage and improve yield.</p>
-                
-                <h4>Hardware Used</h4>
-                <ul>
-                    <li>ESP8266 Microcontroller</li>
-                    <li>Soil Moisture Sensor & DHT11 (Temp/Humidity)</li>
-                    <li>Submersible Water Pumps & Relays</li>
-                </ul>
+      <div class="modal-content">
+        <span class="close-btn" onclick="closeModal('modal-garden')"
+          >&times;</span
+        >
+        <div class="modal-body">
+          <h2>Smart Garden Automated System</h2>
+          <hr
+            style="
+              border: 0;
+              border-top: 1px solid var(--glass-border);
+              margin: 15px 0;
+            "
+          />
 
-                <h4>Features</h4>
-                <p>Real-time dashboard via Blynk, auto-shutoff for water conservation, and hardware LCD status display for local monitoring.</p>
-            </div>
+          <h4>Overview</h4>
+          <p>
+            An IoT-based automation project designed to monitor environmental
+            conditions and automate irrigation for plants to reduce water
+            wastage and improve yield.
+          </p>
+
+          <h4>Hardware Used</h4>
+          <ul>
+            <li>ESP8266 Microcontroller</li>
+            <li>Soil Moisture Sensor & DHT11 (Temp/Humidity)</li>
+            <li>Submersible Water Pumps & Relays</li>
+          </ul>
+
+          <h4>Features</h4>
+          <p>
+            Real-time dashboard via Blynk, auto-shutoff for water conservation,
+            and hardware LCD status display for local monitoring.
+          </p>
         </div>
+      </div>
     </div>
 
     <div id="modal-weather" class="modal-overlay">
-        <div class="modal-content">
-            <span class="close-btn" onclick="closeModal('modal-weather')">&times;</span>
-            <div class="modal-body">
-                <h2>Weather App (Python + Tkinter)</h2>
-                <hr style="border: 0; border-top: 1px solid var(--glass-border); margin: 15px 0;">
-                
-                <h4>Overview</h4>
-                <p>A desktop application developed in Python that provides real-time weather information for any city using the OpenWeatherMap API.</p>
-                
-                <h4>Key Features</h4>
-                <ul>
-                    <li>Fetches current temperature, humidity, and weather conditions.</li>
-                    <li>Clean and user-friendly GUI built with Tkinter.</li>
-                    <li>Error handling for invalid city names or network issues.</li>
-                    <li>Visual icons representing weather states (Sunny, Cloudy, Rainy, etc.).</li>
-                </ul>
+      <div class="modal-content">
+        <span class="close-btn" onclick="closeModal('modal-weather')"
+          >&times;</span
+        >
+        <div class="modal-body">
+          <h2>Currency Converter (HTML + CSS + JavaScript)</h2>
+          <hr
+            style="
+              border: 0;
+              border-top: 1px solid var(--glass-border);
+              margin: 15px 0;
+            "
+          />
 
-                <h4>Development Process</h4>
-                <p>Focused on API integration, JSON parsing, and creating a responsive GUI that works smoothly on different screen resolutions.</p>
-            </div>
+          <h4>Overview</h4>
+          <p>
+            A responsive web application that converts currencies in real time
+            using live exchange rates fetched from the ExchangeRate API. The
+            application allows users to select currencies from dropdown menus
+            with country flags and instantly view accurate conversion results.
+          </p>
+
+          <h4>Key Features</h4>
+          <ul>
+            <li>
+              Fetches real-time exchange rates using the ExchangeRate API.
+            </li>
+            <li>
+              Supports conversion between multiple international currencies.
+            </li>
+            <li>
+              Interactive currency selection with dynamically updated country
+              flags.
+            </li>
+            <li>
+              Responsive and user-friendly interface for desktop and mobile
+              devices.
+            </li>
+          </ul>
+
+          <h4>Development Process</h4>
+          <p>
+            Focused on integrating REST APIs using JavaScript's Fetch API,
+            parsing JSON responses, dynamically updating the DOM, and creating a
+            responsive user interface with HTML and CSS. Implemented
+            asynchronous programming techniques to ensure smooth user experience
+            without page reloads.
+          </p>
         </div>
+      </div>
     </div>
 
     <!-- Confirmation Dialog -->
     <div id="confirmOverlay" class="confirm-overlay">
-        <div class="confirm-box">
-            <h3>Download Resume?</h3>
-            <p>Do you want to download the resume of Pranav Bhalerao?</p>
-            <div class="confirm-buttons">
-                <button class="btn-confirm yes" onclick="downloadResume()">Yes, Download</button>
-                <button class="btn-confirm no" onclick="closeConfirm()">No, Cancel</button>
-            </div>
+      <div class="confirm-box">
+        <h3>Download Resume?</h3>
+        <p>Do you want to download the resume of Pranav Bhalerao?</p>
+        <div class="confirm-buttons">
+          <button class="btn-confirm yes" onclick="downloadResume()">
+            Yes, Download
+          </button>
+          <button class="btn-confirm no" onclick="closeConfirm()">
+            No, Cancel
+          </button>
         </div>
+      </div>
     </div>
 
     <!-- Scripts -->
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
